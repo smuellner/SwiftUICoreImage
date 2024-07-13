@@ -4377,7 +4377,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectChrome() // CIPhotoEffectChrome
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4401,7 +4403,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectFade() // CIPhotoEffectFade
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4425,7 +4429,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectInstant() // CIPhotoEffectInstant
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4449,7 +4455,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectMono() // CIPhotoEffectMono
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4473,7 +4481,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectNoir() // CIPhotoEffectNoir
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4497,7 +4507,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectProcess() // CIPhotoEffectProcess
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4521,7 +4533,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectTonal() // CIPhotoEffectTonal
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
@@ -4545,7 +4559,9 @@ public extension CIImage {
 
 		let filter = CIFilter.photoEffectTransfer() // CIPhotoEffectTransfer
 		filter.inputImage = self
-		filter.extrapolate = extrapolate
+        if #available(macOS 14.0, *) {
+            filter.extrapolate = extrapolate
+        }
 		return filter.outputImage ?? CIImage.empty()
 	}
 
